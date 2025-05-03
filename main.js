@@ -118,9 +118,9 @@ client.on('messageCreate', async (message) => {
           return;
         }
 
-        const channel = guild.channels.cache.find(ch => ch.name === '「💼」współprace' && ch.isText());
+        const channel = guild.channels.cache.find(ch => ch.name === '〡💼・partnerstwa' && ch.isText());
         if (!channel) {
-          await message.channel.send("Nie znaleziono kanału '「💼」współprace'.");
+          await message.channel.send("Nie znaleziono kanału '〡💼・partnerstwa'.");
           return;
         }
 
