@@ -40,6 +40,10 @@ OFERUJEMY RÓWNIEŻ:
 💸・Konkursy dla każdego!
 https://discord.gg/Xk3cfsj4 `;
 
+const partnershipAd = `
+
+`
+
 // Mapowanie kanałów i ich odpowiednich interwałów w milisekundach
 const channelsWithIntervals = {
   '726494920780808233': 2 * 61 * 60 * 1000,
