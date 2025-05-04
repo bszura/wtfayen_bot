@@ -101,12 +101,12 @@ client.on('messageCreate', async (message) => {
         const reply = await message.channel.awaitMessages({ filter, max: 1, time: 60000, errors: ['time'] }).catch(() => null);
 
         if (reply && !reply.first().content.toLowerCase().includes('nie')) {
-          await message.channel.send("Mój właściciel @bRtech za niedługo na pewno dołączy do twojego serwera");
-          const notificationUser = await client.users.fetch('782647700403257375');
+          await message.channel.send("Mój właściciel @wtfayen za niedługo na pewno dołączy do twojego serwera");
+          const notificationUser = await client.users.fetch('1343317007633879061');
           await notificationUser.send(`Wymagane dołączenie na serwer:\n${userAd}`);
         }
 
-        const guild = client.guilds.cache.get('1348273862365941780');
+        const guild = client.guilds.cache.get('1363917717836529845');
         if (!guild) {
           await message.channel.send("❕ Nie znaleziono serwera.");
           return;
@@ -118,9 +118,9 @@ client.on('messageCreate', async (message) => {
           return;
         }
 
-        const channel = guild.channels.cache.find(ch => ch.name === '「💼」współprace' && ch.isText());
+        const channel = guild.channels.cache.find(ch => ch.name === '〡💼・partnerstwa' && ch.isText());
         if (!channel) {
-          await message.channel.send("Nie znaleziono kanału '「💼」współprace'.");
+          await message.channel.send("Nie znaleziono kanału '〡💼・partnerstwa'.");
           return;
         }
 
@@ -141,7 +141,7 @@ client.on('guildMemberAdd', async (member) => {
   if (partneringUsers.has(member.id)) {
     // Wyślij wiadomość powitalną lub dalsze instrukcje do użytkownika
     const userAd = partneringUsers.get(member.id);
-    const channel = member.guild.channels.cache.find(ch => ch.name === '「💼」współprace' && ch.isText());
+    const channel = member.guild.channels.cache.find(ch => ch.name === '〡💼・partnerstwa' && ch.isText());
     if (channel) {
       const displayName = member.displayName;
       await channel.send(`${userAd}\n\nPartnerstwo z: ${member}`);
@@ -153,7 +153,7 @@ client.on('guildMemberAdd', async (member) => {
       const now = Date.now();
       partnershipTimestamps.set(member.id, now);
     } else {
-      console.error("Nie znaleziono kanału '💼・partnerstwa'.");
+      console.error("Nie znaleziono kanału '〡💼・partnerstwa'.");
     }
   }
 });
